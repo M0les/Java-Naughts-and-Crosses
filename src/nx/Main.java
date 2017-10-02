@@ -8,6 +8,13 @@ import nx.model.SimpleSolver;
 import nx.model.Solver;
 import nx.ui.TextInterface;
 
+/**
+ * A really simple naughts and crosses game to try and demonstrate some of the features of Java and
+ * object-oriented coding in general.
+ * 
+ * @author M0les
+ *
+ */
 public class Main {
 
 	public static void main(String[] args) {
