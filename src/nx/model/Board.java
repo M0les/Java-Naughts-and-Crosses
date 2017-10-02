@@ -14,16 +14,16 @@ public class Board {
 			{Piece.None,Piece.None,Piece.None}
 			};
 	
-	public boolean place(int x, int y, Piece piece) {
-		if(Piece.None == board[x][y] && Piece.None != piece) {
-			board[x][y] = piece;
+	public boolean place(int row, int column, Piece piece) {
+		if(Piece.None == board[row][column] && Piece.None != piece) {
+			board[row][column] = piece;
 			return true;
 		}
 		return false;
 	}
 	
-	public Piece get(int x, int y) {
-		return board[x][y];
+	public Piece get(int row, int column) {
+		return board[row][column];
 	}
 	
 	

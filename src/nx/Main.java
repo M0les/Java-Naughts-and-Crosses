@@ -1,16 +1,21 @@
 package nx;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 import nx.model.Board;
-import nx.model.Piece;
-import nx.view.BoardView;
+import nx.model.SimpleSolver;
+import nx.model.Solver;
+import nx.ui.TextInterface;
 
 public class Main {
 
 	public static void main(String[] args) {
 		Board board = new Board();
-		BoardView boardView = new BoardView(board);
-		board.place(1, 1, Piece.X);
-		System.out.println(boardView.getText());
+		Solver solver = new SimpleSolver(System.out);
+		TextInterface iface = new TextInterface(board, new BufferedReader(new InputStreamReader(System.in)),
+				System.out, solver);
+		iface.run();
 	}
 
 }
